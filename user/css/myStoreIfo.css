@@ -1,0 +1,307 @@
+.fa-brands {
+    font-size: x-large;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.sidebar {
+    display: flex;
+    border-radius: 6px;
+    height: 380px;
+    margin-top: 30px;
+    flex-direction: column;
+    text-align: center;
+    flex-basis: 300px;
+    background: #F0F0F0;
+}
+
+.member {
+    margin: 50px 0;
+}
+
+.member img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.member h4 {
+    margin-top: 15px;
+}
+
+.list-menu {
+    bottom: 0px;
+    padding: 5px 0;
+}
+
+.list-item {
+    height: 40px;
+    line-height: 40px
+}
+
+.list-item a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    font-weight: 1000;
+}
+
+.list-menu :hover {
+    color: #408080;
+    background-color: rgba(255, 255, 255, 1);
+    transition: .5s;
+    font-weight: 1000;
+    font-size: large;
+}
+
+@media screen and (max-width:860px) {
+    .nav-container {
+        display: none;
+    }
+}
+
+.collection {
+    height: 100px;
+}
+
+.collection p {
+    font-size: 30px;
+    padding: 20px;
+    margin-top: 30px;
+    border-bottom: 1px solid #000;
+}
+
+.board {
+    background-color: #F0F0F0;
+    border-radius: 6px;
+    height: 95%;
+}
+
+@media screen and (max-width:1200px) {
+    .productView {
+        width: 650px;
+    }
+}
+
+@media screen and (max-width:980px) {
+    .productView {
+        flex-direction: column;
+        height: 520px;
+        width: 100%;
+    }
+    .productImg {
+        border-radius: 15px;
+        width: 100%;
+        height: 300px;
+        background-color: aqua;
+    }
+    .product-detail {
+        width: 100%;
+        margin: auto;
+    }
+}
+
+.accountRow {
+    display: flex;
+    justify-content: space-around;
+}
+
+.account {
+    display: flex;
+    flex-direction: column;
+}
+
+.accountPhone {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16.7%;
+}
+
+.accountPhone input {
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.accountPhone input:hover {
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid #408080;
+}
+
+.account input {
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.account input:hover {
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid #408080;
+}
+
+.account2 input:hover {
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid #408080;
+}
+
+.dropdown {
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+label {
+    font-weight: 1000;
+}
+
+p {
+    font-weight: 1000;
+}
+
+.btnSave {
+    width: 100px;
+    height: 40px;
+    margin-top: 23px;
+    border-radius: 5px;
+    border: 2px solid #408080;
+    margin-right: -100px;
+    font-weight: 1000;
+}
+
+.btnSave:hover {
+    border: 2px solid #408080;
+    background-color: #408080;
+    color: #F0F0F0;
+    /* transition: .5s; */
+}
+
+.account3 input {
+    margin-right: 40px;
+}
+
+.cursor {
+    cursor: pointer;
+    text-align: center;
+}
+
+
+/* 個人圖片 */
+
+.cursor {
+    cursor: pointer;
+    text-align: center;
+}
+
+.custom-file-input {
+    display: none;
+}
+
+.img-thumbnail {
+    cursor: pointer;
+}
+
+@media screen and (max-width:1000px) {
+    footer {
+        position: relative;
+        top: 30px;
+    }
+    .board {
+        height: 100%
+    }
+    #userInfo {
+        display: flex;
+        flex-direction: column;
+    }
+    .accountRow {
+        display: flex;
+        flex-direction: column;
+    }
+    .account {
+        display: flex;
+        flex-direction: row;
+        margin: 30px 0 0 20px;
+    }
+    .account>input {
+        margin-left: 20px;
+    }
+    .account>a>input {
+        margin-left: 20px;
+    }
+    label {
+        width: 80px;
+    }
+    .account3 {
+        margin: auto;
+    }
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    color: white;
+    background-color: #666666;
+    line-height: 40px;
+    bottom: 0%;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    background-color: #666666;
+    line-height: 40px;
+    bottom: 0%;
+    width: 100%;
+   /* position: fixed; */
+}
+
+.custom-file-input {
+    display: none;
+}
+
+.img-thumbnail {
+    cursor: pointer;
+}
+
+.upload {
+    width: 150px !important;
+    margin-top: 30px;
+    border-radius: 10px !important;
+    border: 3px solid #408080 !important;
+    background-color: #F0F0F0 !important;
+}
+
+.upload:hover {
+    background-color: #408080 !important;
+    color: #F0F0F0;
+}
+
+h3 {
+    font-weight: 1000;
+}
+
+h4 {
+    font-weight: 1000;
+}
+
+.bossBtn{
+    float: right;
+    margin-top: 400px;
+    margin-right: 1px;
+    border-radius: 5px;
+    border: 2px solid #000;
+}
+.bossBtn:hover{
+    color: #F0F0F0;
+    background-color: #000;
+}

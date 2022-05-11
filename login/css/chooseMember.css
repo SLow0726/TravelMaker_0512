@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  body{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -240px 0 0 -340px;
+    font-weight: 1000;
+}
+
+.chooseMember{
+    color:white;
+    background-color:#408080;
+    width: 600px;
+    height: 400px;
+    padding: 40px;
+    box-shadow: 10px 10px 25px #00000080;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.chooseMember input{
+    background-color:transparent;
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: left;
+    font-size: 80px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    color: azure;
+    cursor: pointer;  
+    font-size: 1.5rem;
+}
+
+.loginUser{
+    margin-top: 30px;
+    display: flex;
+  
+}
+.normalUser{
+    width: 250px;
+    height: 300px;
+
+    margin: auto auto;
+}
+.storeUser{
+    width: 250px;
+    height: 300px;
+    margin: auto auto;
+}
+
+.normalInput{
+    background-image: url(/login/image/normaluser1.png);
+}
+.storeInput{
+   
+    background-image: url(/login/image/storeuser1.png);
+}
+
+.normalUser :hover{
+    background-color:azure;
+    color:black;
+    transition: 1s;
+    width: 250px;
+    height: 300px;
+    background-image: url(/login/image/normaluser2.png);
+    font-size: 0;
+}
+.storeUser :hover{
+    background-color: azure;
+    color:black;
+    transition: 1s;
+    width: 250px;
+    height: 300px;
+    background-image: url(/login/image/storeuser2.png);
+    font-size: 0;
+}
+

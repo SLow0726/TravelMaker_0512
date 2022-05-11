@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,  shrink-to-fit=no">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="/user/css/myStoreIfo.css">
+    <link rel="stylesheet" href="/public/css/navbar.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+
+    <style>
+
+    </style>
+
+    <title>編輯商家資料-Travel maker</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <input type="checkbox" name="" id="main-control">
+    <header class="main-header ">
+        <div class="container justify-between">
+            <div class="logo">
+                <a href="/home.html" class="logo-a"><img src="./home/image/home-logo.jpg">
+                </a>
+            </div>
+            <label for="main-control" class="main-btn">
+                <span>選單</span>
+            </label>
+            <nav class="main-nav">
+    
+                <a href="/store_Info.html">商家設定</a>
+                <a href="/collect.html" class="nav-right">行程收藏</a>
+                <a href="/map.html">行程製作</a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#account-login" id="account_login">登入</a>
+                <ul class="drop-down-menu hidden">
+                    <li>
+                        <div class="userImg"></div>
+                        <ul>
+                            <li><a href="/user_Info.html">帳號設定</a>
+                            </li>
+                            <li><a href="/collect.html">我的收藏</a>
+                            </li>
+                            <li><a href="/shopChart.html">自訂行程</a>
+                            </li>
+                            <li class="logout"><a href="home.html">登出</a>
+                            </li>
+                        </ul>
+                    </li>
+    
+                </ul>
+    
+            </nav>
+        </div>
+    
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="nav-container">
+                    <div class="sidebar">
+                        <div class="member">
+                            <div class="text-center mb-2 image-preview-wrapper" for="file-uploader">
+                                <img src="" alt="圓形圖" class="img-thumbnail" data-target="image-preview" id="userImg">
+                                <div class="spinner-wrapper position-absolute" data-target="spinner">
+                                </div>
+                            </div>
+                            <input type="file" class="custom-file-input" data-target="file-uploader" id="file-uploader">
+                            <div class="custom-file-label" for="customFile"></div>
+        
+                            <ul class="list-menu list-item-height">
+                                <li class="list-item">
+                                    <a id="aside-member-link-account-setting" href="/user_Info.html">
+                                        <!-- <svg class="custom-kk-icon list-item-icon"></svg>  -->
+                                        <span class="list-item-title">帳號設定</span>
+                                    </a>
+                                </li>
+
+                                <li class="list-item">
+                                    <a id="aside-member-link-account-setting" href="/collect.html">
+                                        <!-- <svg class="custom-kk-icon list-item-icon"></svg>  -->
+                                        <span class="list-item-title">我的收藏</span>
+                                    </a>
+                                </li>
+
+                                <li class="list-item">
+                                    <a id="aside-member-link-account-setting" href="/shopChart.html">
+                                        <!-- <svg class="custom-kk-icon list-item-icon"></svg>  -->
+                                        <span class="list-item-title">自訂行程</span>
+                                    </a>
+                                </li>
+
+                                <li class="list-item">
+                                    <a id="aside-member-link-account-setting" href="/store_Info.html">
+                                        <!-- <svg class="custom-kk-icon list-item-icon"></svg>  -->
+                                        <span class="list-item-title">商家設定</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <div class="board">
+                    <div class="collection">
+                        <div clss="collection-head">
+                            <p>商家設定</p>
+                            <a href="http://20.210.96.122/Home/LOGIN"><input type="button" value="管理者登入" class="bossBtn"></a>
+                        </div>
+                    </div>
+                    <form id="userInfo">
+                        <div class="accountRow">
+                            <div class="account">
+                                <label class="mb-2">身分</label>
+                                <input type="text" disabled="disabled" placeholder="商家會員" name="Attraction">
+                            </div>
+                            <div class="account">
+                                <label class="mb-2">景點價格</label>
+                                <input type="text" class="storePrice" id="storePrice" name="attractionPrice">
+                            </div>
+                            <div class="account">
+                                <label class="mb-2">修改聯絡電話</label>
+                                <input type="text" class="storePhone" id="storePhone" name="attractionPhone">
+                            </div>
+                        </div>
+                        <div class="accountRow mt-4">
+                            <div class="account">
+                                <label class="mb-2">修改景點名稱</label>
+                                <input type="text" class="storeName" id="storeName" name="attrName">
+                            </div>
+                            <div class="account">
+                                <label class="mb-2">修改景點地址</label>
+                                <input type="text" class="storeAddress" id="storeAddress" name="attractionAddress">
+                            </div>
+                            <div class="account">
+                                <label class="mb-2">修改景點類型</label>
+                                <input type="text" class="storeType" id="storeType" name="attractionType">
+                            </div>
+                        </div>
+
+                        <div class="accountRow mt-4">
+                            <div class="account">
+                                <label class="mb-2">修改內文圖片</label>
+
+                                <input type="file" class="fixPicture" data-target="picture" accept="image/jpeg" id="picture" multiple>
+                            </div>
+                            <div class="account" style="display: none;">
+                                <label class="mb-2">圖片名稱</label>
+                                <input type="text" class="" value="" disabled id="attractionImages" name="attractionImages">
+                            </div>
+                            <div class="account">
+                                <input type="button" class="upload" value="上傳照片" id="upload">
+                            </div>
+                        </div>
+                        <div class="accountRow mt-2">
+                            <div class="account3">
+                                <input type="button" value="儲存變更" class="btnSave">
+                                <i class="fa fa-spinner fa-spin fa-2x hidden"></i>
+                            </div>
+                        </div>
+                </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+
+    <footer class="mt-4">
+        <div class="footer_links row">
+            <div class="col-md-3 col-sm-6" id="footer-know-Travel">
+                <h4>認識Travel makert </h4>
+                <ul class="list-unstyled">
+                    <li class="p">Travel makert</li>
+                    <li class="p">使用者條款</li>
+                    <li class="p">隱私權保護政策</li>
+                    <li class="p">常見問題與幫助</li>
+                    <li class="p">媒體報導</li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-sm-6" id="footer-for-travellers">
+                <h4>給旅人</h4>
+                <ul class="list-unstyled">
+                    <li class="p">三大保證</a>
+                    </li>
+                    <li class="p">官方部落格</li>
+                    <li class="p">會員好禮</li>
+                    <li class="p">兌換商品</li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-sm-6" id="footer-for-partner">
+                <h4>Travel maker 合作夥伴</h4>
+                <ul class="list-unstyled">
+                    <li class="p">成為供應商</li>
+                    <li class="p">成為商城商家</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-sm-6 footer-btn-img">
+                <h4>聯絡我們</h4>
+                <div class="sns">
+                    <ul class="list-unstyled">
+                        <li><i class="fa-brands fa-facebook"></i></li>
+                        <li><i class="fa-brands fa-instagram"></i></li>
+                        <li><i class="fa-brands fa-line"></i></li>
+                        <li<i class="fa-brands fa-twitter">
+                            </i>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="/slick/js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="/public/js/cookies.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+
+    <script>
+        var imageUploadInfo;
+        $(".upload").click(() => {
+            // const formdata = new FormData(document.querySelector('#userInfo'))
+            const formdata = new FormData()
+            const pictureValue = document.querySelector("#picture")
+            for (let index = 0; index < pictureValue.files.length; index++) {
+                formdata.append("file", pictureValue.files[index])
+            }
+            fetch("http://20.210.96.122/api/Image/ImageUpload", {
+                    method: 'POST', // or 'PUT'
+                    body: formdata
+
+                }).catch(error => console.log(error))
+                .then(response => {
+                    if (response.status == 200) {
+                        Swal.fire({
+                            title: '圖片上傳成功',
+                            icon: 'success',
+                            confirmButtonText: '確認'
+                        })
+                    }
+                    return response.json()
+                })
+                .then(function(myjson) {
+                    document.getElementById("attractionImages").value = myjson
+                    imageUploadInfo = myjson
+                        // const testName = "F208027CB4BA798049FC6B0EE52BFD3A.jpg,856CFC3092D010E357FF3B04B0ADB5AF.jpg,12190872E903791B74695DD993B3A3E7.jpg"
+                        // console.log(testName.split(","))
+                        // testName.split(",").forEach((key) => {
+                        //     console.log(key)
+                        // });
+
+                });
+        })
+
+
+
+
+        $(".btnSave").click(() => {
+            const formdata = new FormData(document.querySelector('#userInfo'))
+            formdata.append("attr_Id", "56")
+            formdata.append("attractionCover", imageUploadInfo)
+            const object = {};
+            formdata.forEach((value, key) => {
+                object[key] = value;
+            });
+            console.log(object)
+
+            fetch("http://20.210.96.122/api/Attraction/PostAttractionDetail", {
+                    method: 'POST', // or 'PUT'
+                    body: JSON.stringify(object),
+                    headers: new Headers({
+                        'Content-Type': 'application/json'
+                    })
+                }).catch(error => console.log(error))
+                .then(response => {
+                    if (response.status == 201) {
+                        Swal.fire({
+                            title: '上傳成功',
+                            icon: 'success',
+                            confirmButtonText: '確認'
+                        })
+                    }
+                });
+        })
+        var user_Info = $.parseJSON($.cookie('user_Info'))
+        console.log(user_Info)
+        var storePrice;
+        var storePhone;
+        var storeName;
+        var storeAddress;
+        var storeType;
+        var id = user_Info.attractionOwner 
+        fetch('http://20.210.96.122/api/Attraction/GetAttractionDetail/'+ id)
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(myJson) {
+                console.log(myJson);
+                storePrice = myJson.attractionPrice;
+                storePhone = myJson.attractionPhone;
+                storeName = myJson.attrName;
+                storeAddress = myJson.attractionAddress;
+                storeType = myJson.attractionType;
+                storeImages = myJson.attractionImages
+                document.getElementById("storePrice").value = storePrice;
+                document.getElementById("storePhone").value = storePhone;
+                document.getElementById("storeName").value = storeName;
+                document.getElementById("storeAddress").value = storeAddress;
+                document.getElementById("storeType").value = storeType;
+                document.getElementById("attractionImages").value = storeImages;
+            });
+    </script>
+</body>
+
+</html>

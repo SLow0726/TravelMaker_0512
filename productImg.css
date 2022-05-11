@@ -1,0 +1,26 @@
+/* 圖片區_實心/空心 */
+.productImg .two {
+    float: left;
+    position: absolute;
+    top: 9px;
+    right: 10px;
+}
+
+/* 圖片區_box */
+.board .productView .productImg {
+    position: relative;
+}
+
+/* 文字框_box */
+.product-detail {
+    position: relative;
+}
+
+/* 文字框_垃圾桶圖 */
+.product-detail .two {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+}
+
+

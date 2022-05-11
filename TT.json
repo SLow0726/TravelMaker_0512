@@ -1,0 +1,13 @@
+{"travel_Id": 19,
+"DATA": "{\"attractionData\":[[\"華美光學eye玩視界觀光工廠\",\"23.073336878855372, 120.21165426948997\"],[\"樹谷農場\",\"23.104225180004754, 120.26252482401289\"],[\"國立臺灣史前文化博物館南科考古館\",\"23.100942481720157, 120.28439335784653\"],[\"穀倉餐廳\",\"23.13961508541338, 120.21637986689635\"]],\"distanceData\":[{\"distance\":{\"text\":\"7.6 公里\",\"value\":7594},\"duration\":{\"text\":\"14 分鐘\",\"value\":812},\"status\":\"OK\"},{\"distance\":{\"text\":\"3.4 公里\",\"value\":3356},\"duration\":{\"text\":\"7 分鐘\",\"value\":391},\"status\":\"OK\"},{\"distance\":{\"text\":\"18.7 公里\",\"value\":18717},\"duration\":{\"text\":\"23 分鐘\",\"value\":1370},\"status\":\"OK\"}]}",
+"travelOwner": 1,
+"userFavorite": null,
+"travelInfo": null,
+"travelDate": "2022-04-06T12:05:00",
+"travelCity": "台南市",
+"travelType": "開車",
+"travelComment": null,
+"travelRate": null,
+"attractionReferral": "[29,75,41,45]",
+"travelTitle": "travelTitle",
+"travelMap": null}

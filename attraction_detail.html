@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,  shrink-to-fit=no">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/slick/css/slick.css">
+    <link rel="stylesheet" href="/slick/css/slick-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="/Aping_detail/css/detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/public/css/navbar.css">
+    <script src="/slick/js/jquery.min.js"></script>
+    <script src="/slick/js/slick.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+
+
+
+    <title>景點詳細資訊</title>
+    <style>
+
+    </style>
+
+</head>
+
+<input type="checkbox" name="" id="main-control">
+
+<header class="main-header ">
+    <div class="container justify-between">
+        <div class="logo">
+            <a href="/home.html" class="logo-a"><img src="./home/image/home-logo.jpg">
+            </a>
+        </div>
+        <label for="main-control" class="main-btn">
+            <span>選單</span>
+        </label>
+        <nav class="main-nav">
+
+            <a href="/store_Info.html">商家設定</a>
+            <a href="/collect.html" class="nav-right">行程收藏</a>
+            <a href="/map.html">行程製作</a>
+            <a href="#" data-bs-toggle="modal" data-bs-target="#account-login" id="account_login">登入</a>
+            <ul class="drop-down-menu hidden">
+                <li>
+                    <div class="userImg"></div>
+                    <ul>
+                        <li><a href="/user_Info.html">帳號設定</a>
+                        </li>
+                        <li><a href="/collect.html">我的收藏</a>
+                        </li>
+                        <li><a href="/shopChart.html">自訂行程</a>
+                        </li>
+                        <li class="logout"><a href="home.html">登出</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+
+        </nav>
+    </div>
+
+</header>
+
+    <div class=" picture item_1">
+        <img src=""
+            alt="" draggable="false" />
+    </div>
+    
+
+
+<div class="container love">
+    <h3></h3>
+    <div class="keep" >
+        <div class="circle" onclick="toggle()"></div>
+    </div>
+</div>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-12 col-md-6 ">
+            <p class="description">
+            </p>
+        </div>
+        <div class="col-12 col-md-6 
+            content">
+            <div class="card evaluate2">
+                <div class="card-body">
+                    <h3 class="card-title"></h3>
+                    <h4 class="card-text">評價 | ★ 5.0</h4>
+                    <input type="button" class="btn" value="加入自訂行程">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mt-4 mapDetail">
+    <h3 style="margin-bottom: 20px;"></h3>
+    <div class="map_border">
+        <p></p>
+        <p></p>
+        <div class="map mt-4">
+            <iframe class="location" width="80%" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src=https://maps.google.com.tw/maps?f=q&hl=zh-TW&geocode=&q=大都市國際中心&z=16&output=embed&t=></iframe>
+        </div>
+    </div>
+</div>
+<!-- <div class="container mt-4 illustrate">
+    <h3>景點說明</h3>
+    <p>
+        － 行程資訊 －
+    </p>
+    <ul class="attr_Info">
+        <li>古蹟名稱：安平古堡</li>
+        <li>地址：臺南市安平區國勝路82號</li>
+        <li>開放時間：週一至週五：9:00~17:30</li>
+    </ul>
+</div> -->
+
+<div class="container mt-4 evaluate">
+    <h3>旅客評價</h3>
+    <p id="count"></p>
+</div>
+<div class="container mt-4">
+    <div class="row userEvaluate">
+        <div class="col-12 col-md-4">
+            <div class="card mb-4">
+                <div class="card-header bg-transparent headerTitle">
+                    <div class="userImg">
+                        <img src="./Aping_detail/image/3.jpg">
+                    </div>
+                    <div>2022/03/22</div>
+                </div>
+                <div class="card-body text-success">
+
+                    <p class="card-text">不錯 但假日人潮真多</p>
+                </div>
+                <div class="card-footer bg-transparent">★ 5.0</div>
+            </div>
+        </div>
+        <div class="col-12 col-md-4">
+            <div class="card mb-4">
+                <div class="card-header bg-transparent headerTitle">
+                    <div class="userImg">
+                        <img src="./Aping_detail/image/3.jpg">
+                    </div>
+                    <div>2022/03/22</div>
+                </div>
+                <div class="card-body text-success">
+
+                    <p class="card-text">普通</p>
+                </div>
+                <div class="card-footer bg-transparent">★ 3.0</div>
+            </div>
+        </div>
+        <div class="col-12 col-md-4">
+            <div class="card mb-4">
+                <div class="card-header bg-transparent headerTitle">
+                    <div class="userImg">
+                        <img src="./Aping_detail/image/3.jpg">
+                    </div>
+                    <div>2022/03/22</div>
+                </div>
+                <div class="card-body text-success">
+
+                    <p class="card-text">這地方真是好玩 ! </p>
+                </div>
+                <div class="card-footer bg-transparent">★ 5.0</div>
+            </div>
+        </div>
+        <div class="col-12 col-md-4">
+            <div class="card mb-4">
+                <div class="card-header bg-transparent headerTitle">
+                    <div class="userImg">
+                        <img src="./Aping_detail/image/3.jpg">
+                    </div>
+                    <div>2021/12/12</div>
+                </div>
+                <div class="card-body text-success">
+
+                    <p class="card-text">無聊死了 ! </p>
+                </div>
+                <div class="card-footer bg-transparent">★ 2.0</div>
+            </div>
+        </div>
+        <div class="col-12 col-md-4">
+            <div class="card mb-4">
+                <div class="card-header bg-transparent headerTitle">
+                    <div class="userImg">
+                        <img src="./Aping_detail/image/3.jpg">
+                    </div>
+                    <div>2002/05/11</div>
+                </div>
+                <div class="card-body text-success">
+
+                    <p class="card-text">適合全家大小出遊的好地方</p>
+                </div>
+                <div class="card-footer bg-transparent">★ 5.0</div>
+            </div>
+        </div>
+        <div class="col-12 col-md-4">
+            <div class="card mb-4">
+                <div class="card-header bg-transparent headerTitle">
+                    <div class="userImg">
+                        <img src="./Aping_detail/image/3.jpg">
+                    </div>
+                    <div>2022/03/22</div>
+                </div>
+                <div class="card-body text-success">
+
+                    <p class="card-text">讚啦 ! 值得回訪</p>
+                </div>
+                <div class="card-footer bg-transparent">★ 5.0
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mt-4 evaluate">
+    <h3>你的評價</h3>
+</div>
+<div class="container mt-4 mb-4 evaluateRWD">
+    <textarea cols="40" rows="5" class="evaluateText"></textarea>
+    <div class="star">
+        <input type="radio" name="rdStar" value="" checked="checked" class="checked" />
+        <input type="radio" name="rdStar" value="1" />
+        <input type="radio" name="rdStar" value="2" />
+        <input type="radio" name="rdStar" value="3" />
+        <input type="radio" name="rdStar" value="4" />
+        <input type="radio" name="rdStar" value="5" />
+    </div>
+
+    <input type="submit" value="傳出評價" class="evaluateSub">
+</div>
+
+
+
+<footer>
+    <div class="footer_links row">
+        <div class="col-md-3 col-sm-6" id="footer-know-Travel">
+            <h4>認識Travel makert </h4>
+            <ul class="list-unstyled">
+                <li class="p">Travel makert</li>
+                <li class="p">使用者條款</li>
+                <li class="p">隱私權保護政策</li>
+                <li class="p">常見問題與幫助</li>
+                <li class="p">媒體報導</li>
+            </ul>
+        </div>
+
+
+        <div class="col-md-3 col-sm-6" id="footer-for-travellers">
+            <h4>給旅人</h4>
+            <ul class="list-unstyled">
+                <li class="p">三大保證</a>
+                </li>
+                <li class="p">官方部落格</li>
+                <li class="p">會員好禮</li>
+                <li class="p">兌換商品</li>
+
+            </ul>
+        </div>
+
+
+        <div class="col-md-3 col-sm-6" id="footer-for-partner">
+            <h4>Travel maker 合作夥伴</h4>
+            <ul class="list-unstyled">
+                <li class="p">成為供應商</li>
+                <li class="p">成為商城商家</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-3 col-sm-6 footer-btn-img">
+            <h4>聯絡我們</h4>
+            <div class="sns">
+                <ul class="list-unstyled">
+                    <li><i class="fa-brands fa-facebook"></i></li>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                    <li><i class="fa-brands fa-line"></i></li>
+                    <li<i class="fa-brands fa-twitter">
+                        </i>
+                        </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="/public/js/cookies.js"></script>
+<script src="/Aping_detail/js/evalute.js"></script>
+<script src="/Aping_detail/js/slick.js"></script>
+
+</script>
+</body>
+
+</html>

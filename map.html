@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生成地圖-Travel Maker</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="./user/css/map.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <script src="./map0331/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <!-- 測試： -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="./public/css/navbar.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+
+<body>
+    <input type="checkbox" name="" id="main-control">
+    <header class="main-header ">
+        <div class="container justify-between">
+            <div class="logo">
+                <a href="/home.html" class="logo-a"><img src="./home/image/home-logo.jpg">
+                </a>
+            </div>
+            <label for="main-control" class="main-btn">
+                <span>選單</span>
+            </label>
+            <nav class="main-nav">
+    
+                <a href="/store_Info.html">商家設定</a>
+                <a href="/collect.html" class="nav-right">行程收藏</a>
+                <a href="/map.html">行程製作</a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#account-login" id="account_login">登入</a>
+                <ul class="drop-down-menu hidden">
+                    <li>
+                        <div class="userImg"></div>
+                        <ul>
+                            <li><a href="/user_Info.html">帳號設定</a>
+                            </li>
+                            <li><a href="/collect.html">我的收藏</a>
+                            </li>
+                            <li><a href="/shopChart.html">自訂行程</a>
+                            </li>
+                            <li class="logout"><a href="home.html">登出</a>
+                            </li>
+                        </ul>
+                    </li>
+    
+                </ul>
+    
+            </nav>
+        </div>
+    
+    </header>
+
+    </div>
+    <div class="banner">
+        <!-- 左邊部分 -->
+        <div class="left">
+            <!-- 左邊景點標題 -->
+            <p class="left_title">景點排序</p>
+            <!-- 左邊小區塊 -->
+            <div class="left_content">
+                <!-- <div class="left_box">
+                    地標名稱_背景區塊
+                    <div class="title_box">
+                        地標名
+                        <p class="title">777</p>
+                        取消鍵
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                    地標內容_文字內容
+                    <p class="content"></p>
+                </div> -->
+            </div>
+        </div>
+        <div class="space"></div>
+
+        <!-- 中+右背景區 -->
+        <div class="main main_w99"><!-- 0404修改 -->
+            <!-- 中間顯示地圖區 -->
+            <div class="main_box" id="map"></div>
+
+            <!-- 0401_生成 -->
+            <button class="createMap" data-bs-toggle="modal" data-bs-target="#account-login">生成</button>
+
+            <!-- 刪除全部左邊小區塊 -->
+            <button class="deleteBox">刪除</button>
+            
+
+            <!-- 右邊城市區塊 -->
+            <div class="main_box_bgc">
+                <!-- 城市名 -->
+                <!--  -->
+                <!-- 區域名 -->
+                <div class="cityAA">區域</div>
+                <!-- 可選擇的區域 -->
+                <!-- <div>
+                    <div class="cityBB">
+                        <ul>
+                            <li><a href="#">中西區</a></li>
+                            <li><a href="#">北區</a></li>
+                            <li><a href="#">永康區</a></li>
+                            <li><a href="#">左鎮區</a></li>
+                            <li><a href="#">南化區</a></li>
+                            <li><a href="#">龍崎區</a></li>
+                            <li><a href="#">佳里區</a></li>
+                            <li><a href="#">將軍區</a></li>
+                            <li><a href="#">新營區</a></li>
+                            <li><a href="#">東山區</a></li>
+                            <li><a href="#">柳營區</a></li>
+                            <li><a href="#">大內區</a></li>
+                            <li><a href="#">安定區</a></li>
+                            <li><a href="#">東區</a></li>
+                            <li><a href="#">安平區</a></li>
+                            <li><a href="#">歸仁區</a></li>
+                            <li><a href="#">玉井區</a></li>
+                            <li><a href="#">仁德區</a></li>
+                            <li><a href="#">官田區</a></li>
+                            <li><a href="#">西港區</a></li>
+                            <li><a href="#">學甲區</a></li>
+                            <li><a href="#">後壁區</a></li>
+                            <li><a href="#">六甲區</a></li>
+                            <li><a href="#">鹽水區</a></li>
+                            <li><a href="#">山上區</a></li>
+                            <li><a href="#">南區</a></li>
+                            <li><a href="#">新化區</a></li>
+                            <li><a href="#">楠西區</a></li>
+                            <li><a href="#">關廟區</a></li>
+                            <li><a href="#">麻豆區</a></li>
+                            <li><a href="#">七股區</a></li>
+                            <li><a href="#">北門區</a></li>
+                            <li><a href="#">白河區</a></li>
+                            <li><a href="#">下營區</a></li>
+                            <li><a href="#">善化區</a></li>
+                            <li><a href="#">新市區</a></li>
+                        </ul>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-4">
+        <div class="footer_links row">
+            <div class="col-md-3 col-sm-6" id="footer-know-Travel">
+                <h4>認識Travel makert </h4>
+                <ul class="list-unstyled">
+                    <li class="p">Travel makert</li>
+                    <li class="p">使用者條款</li>
+                    <li class="p">隱私權保護政策</li>
+                    <li class="p">常見問題與幫助</li>
+                    <li class="p">媒體報導</li>
+                </ul>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6" id="footer-for-travellers">
+                <h4>給旅人</h4>
+                <ul class="list-unstyled">
+                    <li class="p">三大保證</a>
+                    </li>
+                    <li class="p">官方部落格</li>
+                    <li class="p">會員好禮</li>
+                    <li class="p">兌換商品</li>
+
+                </ul>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6" id="footer-for-partner">
+                <h4>Travel maker 合作夥伴</h4>
+                <ul class="list-unstyled">
+                    <li class="p">成為供應商</li>
+                    <li class="p">成為商城商家</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-sm-6 footer-btn-img">
+                <h4>聯絡我們</h4>
+                <div class="sns">
+                    <ul class="list-unstyled">
+                        <li><i class="fa-brands fa-facebook"></i></li>
+                        <li><i class="fa-brands fa-instagram"></i></li>
+                        <li><i class="fa-brands fa-line"></i></li>
+                        <li<i class="fa-brands fa-twitter">
+                            </i>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <div class="modal fade" id="account-login" tabindex="-1" aria-labelledby="account-login" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <form action="" class="login" id="formLogin">
+                    <!-- 0402修改 -->
+                    <!-- <i class="fa-solid fa-xmark"></i> -->
+
+                    <h1 class="title">行程名稱</h1>
+                    <div class="userEnter">
+                        <input type="text" placeholder="請輸入自訂行程" name="username" id="user" style="color: #272727;" class="inputContent" />
+                        <!-- <p class="nameErro"></p> -->
+                        <!-- <input type="password" placeholder="Password" name="password" id="psw" style="color: #272727;" class="inputContent" />
+                        <p class="pswErro"></p> -->
+                        <!-- <a href="http://google.com" class="forgetPassword" style="color:#272727;">忘記密碼?</a>
+                        <p class="loginErro"></p> -->
+                        <input type="button" value="製作" id="btnLogin" />
+                        <!-- <div id="registerPage" style="color:#272727; margin-left: 200px;">還未加入Travel Maker? 立即註冊 !
+                        </div> -->
+                    </div>
+                </form>
+
+              
+            </div>
+
+        </div>
+    </div>
+
+    <!-- <script
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"
+    ></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"
+    ></script>
+    <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"
+    ></script> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="/public/js/cookies.js"></script>
+    <script src="./home/js/map.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCp88XzaxjsBXJiRtmyPFqDqpn8LgSUJHw&callback=initMap&v=weekly" async></script>
+</body>
+
+</html>

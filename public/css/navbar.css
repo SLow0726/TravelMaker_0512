@@ -1,0 +1,285 @@
+* {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    padding-top: 90px;
+}
+
+#main-control {
+    position: fixed;
+    opacity: 0;
+}
+
+.main-header {
+    position: fixed;
+    z-index: 99;
+    top: 0px;
+    height: 70px;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid #E0E0E0;
+    background-color: #fff;
+}
+
+.justify-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 200px;
+}
+
+.logo-a {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: auto;
+}
+
+.logo img {
+    width: 200px;
+}
+
+.main-btn {
+    width: 50px;
+    height: 50px;
+    display: block;
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    margin: auto;
+    right: 10px;
+}
+
+.main-btn span {
+    opacity: 0;
+}
+
+.main-btn::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    left: 5px;
+    width: 30px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    background-color: #000;
+    -webkit-box-shadow: 0px 9px 0px #000, 0px -9px 0px #000;
+    box-shadow: 0px 9px 0px #000, 0px -9px 0px #000;
+}
+
+.main-nav {
+    display: block;
+    width: 70%;
+    text-align: center;
+    height: calc(100vh - 60px);
+    background-color: #fff;
+    position: absolute;
+    top: 70px;
+    right: -100%;
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+
+.main-nav a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #000;
+    border-bottom: 1px solid #F0F0F0;
+}
+
+.main-nav a:hover {
+    color: #008888;
+    /* font-size: large; */
+    transition: 0.5s;
+    font-size: large;
+}
+
+#main-control:checked~.main-header nav {
+    right: 0;
+}
+
+#main-control:checked~body {
+    background-color: #E0E0E0;
+}
+
+@media screen and (min-width: 860px) {
+    .main-btn {
+        display: none;
+    }
+    .main-header {
+        display: flex;
+        justify-content: space-between;
+    }
+    .main-nav {
+        position: relative;
+        left: 0;
+        display: flex;
+        align-items: center;
+        height: 40px;
+        width: 400px;
+        top: 0px;
+        bottom: 0;
+    }
+    .d-flex {
+        margin-left: 600px;
+    }
+    .main-nav a {
+        padding: 0;
+        border-bottom: none;
+        margin-right: 40px;
+        font-size: 16px;
+    }
+}
+
+.main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+ul {
+    /* 取消ul預設的內縮及樣式 */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.drop-down-menu {
+    display: inline-block;
+    text-align: start;
+    font-size: 13px;
+}
+
+ul.drop-down-menu li {
+    position: relative;
+    white-space: nowrap;
+}
+
+ul.drop-down-menu>li:last-child {
+    border-right: none;
+}
+
+ul.drop-down-menu>li {
+    float: left;
+    /* 只有第一層是靠左對齊*/
+}
+
+ul.drop-down-menu {
+    position: relative;
+}
+
+ul.drop-down-menu:hover::after {
+    position: absolute;
+    bottom: 100%;
+    left: 0px;
+    width: 16px;
+    height: 16px;
+    border-width: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-right-width: 10px;
+    border-right-color: currentColor;
+    border-radius: 0 32px 0 0;
+    color: #000;
+}
+
+ul.drop-down-menu a {
+    background-color: #fff;
+    color: #333;
+    width: 100%;
+    text-decoration: none;
+    line-height: 40px;
+}
+
+ul.drop-down-menu>li>ul::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 22px solid transparent;
+    border-left: 22px solid #000;
+    margin-left: -9.5px;
+    margin-top: -20px;
+}
+
+*::after {
+    box-sizing: border-box;
+}
+
+ul.drop-down-menu>li>ul::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-bottom-color: #fff;
+    border-top: 0;
+    border-left: 0;
+    margin-left: -8px;
+    margin-top: -17px;
+}
+
+*::before {
+    box-sizing: border-box;
+}
+
+ul.drop-down-menu ul {
+    border: 1px solid #333;
+    position: absolute;
+    left: -27px;
+    top: 50px;
+    min-width: 120px;
+}
+
+ul.drop-down-menu ul li {
+    border-bottom: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+ul.drop-down-menu ul :hover {
+    color: white;
+    font-size: larger;
+    background-color: #008888;
+}
+
+ul.drop-down-menu ul {
+    /*隱藏次選單*/
+    display: none;
+}
+
+ul.drop-down-menu li:hover>ul {
+    /* 滑鼠滑入展開次選單*/
+    display: block;
+    transition: 1s;
+}
+
+.userImg {
+    height: 40px;
+    width: 40px;
+    /* background-image: url(/home/image/2.jpg); */
+    border-radius: 50%;
+    background-size: cover;
+    object-fit: cover;
+    border: 1px solid #333;
+}
+
+.hidden {
+    display: none !important;
+}
+
+* {
+    font-weight: 1000;
+}

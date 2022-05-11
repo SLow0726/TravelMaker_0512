@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+body{
+    font-family: 'Noto Sans TC', sans-serif;
+    background-color: #f8f8f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.register{
+  color:black;
+  background-color:#FFFFFF;
+  width: 600px;
+  height: 500px;
+  padding: 40px;
+  box-shadow: 10px 10px 25px #00000080;
+  text-align: center;
+  border-radius: 12px;
+}
+.register input{
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  background: none;
+  padding: 12px;
+  font-size: 15px;
+  border-radius: 12px;
+  border: size 125px;
+  outline: none;
+  color:#272727;
+}
+.userName, .passWord ,.cellPhone, .email{
+  display: flex;
+  justify-content: center;
+}
+
+.register input[type="submit"]{
+  width: 150px;
+  border: 4px solid #408080;
+  cursor: pointer;
+  font-weight: 1000;
+}
+.color{
+  float:left;
+  background-color: #408080;
+  width: 680px;
+  height: 20px;
+  margin-top: -40px;
+  margin-left: -40px;
+  border-radius: 12px 12px 0 0;
+}
+.name, .pass, .phone, .mail{
+  border: 3px solid #272727;
+  font-weight: 1000;
+}
+.register input[type="submit"]:hover{
+  background-color:#408080;
+  color: white;
+  transition: 0.5s;
+}
+p{
+  margin-top:-20px ;
+  color: red;
+  font-weight: 1000;
+  display: none;
+}
+a{
+  text-decoration: none;
+}
